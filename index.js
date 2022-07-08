@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch("activities.json")
             .then(response => response.json())
             .then(json => {
-                console.log(random_item(json));
+                document.querySelector('h1').innerHTML = random_item(json)['activity'];
             });
 })
